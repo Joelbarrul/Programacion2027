@@ -97,7 +97,7 @@ public class Main {
         System.out.println("----------------------------------------");
 
         // Ejercicio 8: Escribe un programa que lee dos números y los visualiza en orden ascendente.
-        
+
         System.out.println("Introduce el primer número:");
         double numero1 = teclado.nextDouble();
         System.out.println("Introduce el segundo número:");
@@ -107,6 +107,23 @@ public class Main {
         double mayor = Math.max(numero1, numero2);
         System.out.println("Los números en orden ascendente son: " + menor + " y " + mayor);
 
+        System.out.println("----------------------------------------");
+
+        // Ejercicio 9: Escribe un programa que lee dos números y los visualiza en orden ascendente.
+
+        System.out.println("introduce el primer numero para ordenar");
+        double valor1 = teclado.nextDouble();
+        System.out.println("introduce el segundo numero para ordenar");
+        double valor2 = teclado.nextDouble();
+        double menor1 = Math.min(valor1, valor2);
+        double mayor1 = Math.max(valor1, valor2);
+        System.out.println("Los numero en orden ascendentes son: " + menor1 + " y " + mayor1);
+
+        System.out.println("----------------------------------------");
+
+        // Ejercicio 10:  Escribe un programa que lea tres números distintos y nos diga cuál es el mayor.
+
+        System.out.println();
     }
 }
 
