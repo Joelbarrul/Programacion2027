@@ -90,7 +90,22 @@ public class Main {
         //y escriba la distancia en metros. Sabiendo que una milla marina equivale a 1.852 metros.
 
         System.out.println("Introduce la distancia en millas marinas");
+        double millas = teclado.nextDouble();
+        double DistanciaMetros = millas * 1825;
+        System.out.println(millas + " millas marinas equivalen a " + DistanciaMetros + " metros.");
 
+        System.out.println("----------------------------------------");
+
+        // Ejercicio 8: Escribe un programa que lee dos números y los visualiza en orden ascendente.
+        
+        System.out.println("Introduce el primer número:");
+        double numero1 = teclado.nextDouble();
+        System.out.println("Introduce el segundo número:");
+        double numero2 = teclado.nextDouble();
+
+        double menor = Math.min(numero1, numero2);
+        double mayor = Math.max(numero1, numero2);
+        System.out.println("Los números en orden ascendente son: " + menor + " y " + mayor);
 
     }
 }
