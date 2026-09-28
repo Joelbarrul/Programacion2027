@@ -9,7 +9,6 @@ public class Main {
         System.out.println("Anuar dejame usar phyton POR FAVOOOOOOR");
 
 
-
         System.out.println("----------------------------------------");
 
 
@@ -32,7 +31,6 @@ public class Main {
         double ladoA = teclado.nextDouble();
         double area1 = ladoA * ladoA;
         System.out.println("El area es: " + area1);
-
 
 
         System.out.println("----------------------------------------");
@@ -91,7 +89,7 @@ public class Main {
 
         System.out.println("Introduce la distancia en millas marinas");
         double millas = teclado.nextDouble();
-        double DistanciaMetros = millas * 1825;
+        double DistanciaMetros = millas * 1852;
         System.out.println(millas + " millas marinas equivalen a " + DistanciaMetros + " metros.");
 
         System.out.println("----------------------------------------");
@@ -109,21 +107,65 @@ public class Main {
 
         System.out.println("----------------------------------------");
 
-        // Ejercicio 9: Escribe un programa que lee dos números y los visualiza en orden ascendente.
+        // Ejercicio 9:  Escribe un programa que lee dos números y nos dice cuál es el mayor o si son iguales.
+        System.out.println("Introduce el primer número:");
+        double Num1 = teclado.nextDouble();
+        System.out.println("Introduce el segundo número:");
+        double Num2 = teclado.nextDouble();
 
-        System.out.println("introduce el primer numero para ordenar");
-        double valor1 = teclado.nextDouble();
-        System.out.println("introduce el segundo numero para ordenar");
-        double valor2 = teclado.nextDouble();
-        double menor1 = Math.min(valor1, valor2);
-        double mayor1 = Math.max(valor1, valor2);
-        System.out.println("Los numero en orden ascendentes son: " + menor1 + " y " + mayor1);
+        String resultado = (Num1 == Num2) ? "Los numeros son iguales" : (Num1 > Num2) ? "El primer numero es el mayor" : "El segundo numero es el mayor";
+        System.out.println(resultado);
 
         System.out.println("----------------------------------------");
 
         // Ejercicio 10:  Escribe un programa que lea tres números distintos y nos diga cuál es el mayor.
 
-        System.out.println();
+        System.out.println("Introduce el primer número");
+        double n1 = teclado.nextDouble();
+        System.out.println("Introduce el segundo número");
+        double n2 = teclado.nextDouble();
+        System.out.println("Introduce el tercer número");
+        double n3 = teclado.nextDouble();
+
+        double elMayor = Math.max(n1, Math.max(n2, n3));
+        System.out.println("El numero mayor de los tres es: " + elMayor);
+
+        System.out.println("----------------------------------------");
+
+        // Ejercicio 11 : Escribe un programa que lee dos números, calcula y muestra el valor de su suma, resta,
+        //producto y división. (Ten en cuenta la división por cero).
+
+        System.out.println("Introduce el primer número:");
+        double número1 = teclado.nextDouble();
+        System.out.println("Introduce el segundo número:");
+        double número2 = teclado.nextDouble();
+
+        double sumar = número1 + número2;
+        double restar = número2 - número2;
+        double multiplicar = número1 * número2;
+        String dividir = (número2 == 0) ? "No se puede dividir entre cero" : String.valueOf(número1 / número2);
+
+        System.out.println("----------------------------------------");
+
+        // Ejercicio 12 :  Escribe un programa que lee 2 números y muestra el mayor
+
+        System.out.println("Introduce el primer número:");
+        double number1 = teclado.nextDouble();
+        System.out.println("Introduce el segundo número:");
+        double number2 = teclado.nextDouble();
+
+        double grande = Math.max(number1, number2);
+        System.out.println("El numero mayor es:" + grande);
+
+        System.out.println("----------------------------------------");
+
+        // Ejercicio 13:  Escribe un programa que lee un número y me dice si es positivo o negativo
+        //consideraremos el cero como positivo.
+
+        System.out.println("Introduce un numero:");
+        double Nam = teclado.nextDouble();
+        String resultado1 = (Nam >= 0) ? "positivo" : "negativo";
+        System.out.println("El numeor introducido es" + resultado1);
     }
 }
 
