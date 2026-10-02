@@ -262,9 +262,28 @@ public class UD2Actividad2 {
             salarioBruto = horasTrabajadas * tarifaNormal;
 
     } else {
+            int horasExtras = horasTrabajadas - 35;
+            salarioBruto = (35 * tarifaNormal) + (horasExtras * 1.5 * tarifaNormal);
+
             
     }
+        double tasas = 0;
+        if (salarioBruto <= 500)
+            tasas = 0;
+
+        else if (salarioBruto <= 900) {
+            tasas = (salarioBruto - 500) * 0.25;
+
+        } else {
+            tasas = 100 + (salarioBruto - 900) * 0.45;
         }
+        double salarioNeto = (salarioBruto - tasas);
+
+        System.out.println("Trabajador: " + nombre);
+        System.out.println("Salario Bruto: " + salarioBruto + "euros");
+        System.out.println("Tasas ( Impuestos)" + tasas + "euros");
+        System.out.println("Salario neto: " + salarioNeto + "euros");
+    }
 
     }
 
