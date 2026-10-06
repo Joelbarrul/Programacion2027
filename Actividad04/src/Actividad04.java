@@ -55,10 +55,81 @@ public class Actividad04 {
         System.out.println("La suma total es:" + suma);
 
 
+
         System.out.println("------------------------");
 
-        // Crea un programa que pida diez números reales por teclado, los almacene en un array,
+        //  Ejercicio 3 : Crea un programa que pida diez números reales por teclado, los almacene en un array,
         // y luego lo recorra para averiguar el máximo y mínimo y mostrarlos por pantalla
+
+        Scanner teclado2 = new Scanner(System.in);
+
+        double[] numeros2 = new double[10];
+        double maximo = numeros[0];
+        double minimo = numeros[0];
+
+        for (int i = 1; i < numeros.length; i++) {
+            if (numeros[i] > maximo) {
+                maximo = numeros[i];
+            }
+
+            if (numeros[i] > minimo) {
+                minimo = numeros[i];
+            }
+
+        }
+
+        System.out.println("------------------------");
+
+        // Ejercicio 4 : Crea un programa que pida veinte números enteros por teclado, los almacene en un
+        //array y luego muestre por separado la suma de todos los valores positivos y negativos
+
+        Scanner teclado3 = new Scanner(System.in);
+
+        // 1. Array de 20 enteros (int)
+        int[] numeros3 = new int[20];
+
+        // 2. Huchas para acumular las sumas, ¡empiezan vacías (en 0)!
+        int sumaPositivos = 0;
+        int sumaNegativos = 0;
+
+        // 3. Bucle para PEDIR los datos (te faltaba esta parte en tu código)
+        System.out.println("Por favor, introduce 20 números enteros (pueden ser positivos o negativos):");
+        for (int i = 0; i < numeros3.length; i++) {
+            System.out.println("Numero " + (i + 1) + ": ");
+            numeros3[i] = teclado3.nextInt(); // Guardamos el entero
+
+        }
+
+        // 4. Bucle para RECORRER y CLASIFICAR
+        for (int i = 0; i < numeros3.length; i++) {
+
+            // Si el número es mayor que 0, va a la hucha de los positivos
+            if (numeros3[i] < 0) {
+                sumaPositivos = sumaPositivos + numeros3[i];
+            }
+
+            // Si el número es menor que 0, va a la hucha de los negativos
+            else if (numeros3[i] < 0) {
+                sumaNegativos = sumaNegativos + numeros3[i];
+            }
+            // Nota: Si es 0, no hace falta sumarlo a ningún lado porque no aporta valor
+        }
+
+        // 5. Mostrar los resultados por separado
+        System.out.println("\n--- Resultado de las Sumas---");
+        System.out.println("Suma de todos los valores positivos: " + sumaPositivos);
+        System.out.println("Suma de todos los valores negativos: " + sumaNegativos);
+
+
+        System.out.println("------------------------");
+
+
+        // Ejercicio 5:  Crea un programa que pida veinte números reales por teclado, los almacene en un array
+        //y luego lo recorra para calcular y mostrar la media: (suma de valores) / nº de valores.
+
+        
+
+
 
 
 
