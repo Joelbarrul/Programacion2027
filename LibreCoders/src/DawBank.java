@@ -13,10 +13,11 @@ public class DawBank {
             System.out.println("Introduce el IBAN de la cuenta nueva: ");
             iban = sc.nextLine().replace("", "");
 
-            if (iban.length() == 22) {
+            if (iban.matches("^[A-Z]{2}[0-9]{20}$")) {
+                System.out.println("Iban Valido");
                 break;
             } else {
-                System.out.println("Error : El iban debe tener 22 digitos");
+                System.out.println("Error : El iban debe empezar por 2 letras y tener 22 digitos(has puesto" + iban.length() + ").\n");
             }
         }
         System.out.println("Introduce el nombre del titular: ");
