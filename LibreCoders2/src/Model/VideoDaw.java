@@ -1,10 +1,10 @@
 package Model;
 import java.util.Arrays;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
-import java.util.HashMap;
+import java.time.LocalDate; // Fecha en el instante en el que se ejecuta
+import java.time.LocalDateTime; // Fecha y hora en el momento en el que se ejecuta
+import java.time.format.DateTimeFormatter; // Le damos forma a la fecha y hora como texto legible
+import java.time.temporal.ChronoUnit; // Representar Unidades de tiempo
+import java.util.HashMap; // Almacenar datos en pares Clave-Valor
 
 public class VideoDaw {
     // Atributos
