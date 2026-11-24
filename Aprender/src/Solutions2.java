@@ -46,6 +46,18 @@ public class Solutions2 {
                     }
                     break;
 
+                case "3":
+                    System.out.println("llevas acumulado un total de: " + total + "€");
+                    break;
+
+                case "4":
+                    System.out.println("total a pagar: " + total + "€");
+                    System.out.println("Gracias por tu compra");
+                    ejecutar = false;
+                    break;
+
+                default:
+                    System.out.println("Opcion no válida.Por favor, escribe un numero del 1 al 4");
                     
             }
         }
