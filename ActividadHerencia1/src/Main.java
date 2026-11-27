@@ -14,7 +14,7 @@ public class Main {
             if(sistemaSolar[i] != null){
                 System.out.println(sistemaSolar[i].muestra());
             }
-            
+
         }
     }
 }
