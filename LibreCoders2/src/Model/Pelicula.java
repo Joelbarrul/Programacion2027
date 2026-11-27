@@ -61,28 +61,39 @@ public class Pelicula {
         return this.FechaAlquiler;
     }
 
-    public void mostrarInfoPelicula () {
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+        sb.append("identificador='").append(identificador).append("\n");
+        sb.append("titulo='").append(titulo).append("\n");
+        sb.append("FechaRegistro=").append(FechaRegistro).append("\n");
+        sb.append("FechaBaja=").append(FechaBaja).append("\n");
+        sb.append("FechaAlquiler=").append(FechaAlquiler).append("\n");
+        sb.append("IsAlquilada=").append(IsAlquilada).append("\n");
+        sb.append("genero=").append(genero).append("\n");
+        return sb.toString();
+    }
+
+    public String mostrarInfoPelicula () {
 
         DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter formatoFechaHora = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
-        System.out.println("--- INFORMACION DE LA PELICULA ---");
-        System.out.println("identificador: " + this.identificador);
-        System.out.println("Titulo: " + this.titulo);
-        System.out.println("Genero: " + this.genero);
-        System.out.println("¿Esta aqluilada?: " + (this.IsAlquilada ? "Si" : "No"));
+         String mostrarinfopelicula = "--- MOSTRAR INFO DE PELICULA--- \n";
+         mostrarinfopelicula += "identificador: " + this.identificador + "\n";
+         mostrarinfopelicula += "titulo: " + this.titulo + "\n";
+         mostrarinfopelicula += "Fecha de registro: " + this.FechaRegistro.format(formatoFecha) + "\n";
 
-
-        System.out.println("Fecha de registro " + this.FechaRegistro.format(formatoFecha));
 
         if (this.FechaAlquiler != null) {
-            System.out.println("Fecha de alquiler: " + this.FechaBaja.format(formatoFechaHora));
+            mostrarinfopelicula += "Fecha de alquiler: " + this.FechaAlquiler.format(formatoFechaHora) + "\n";
         }
 
         if (this.FechaBaja != null) {
-            System.out.println("Fecha de baja: " + this.FechaBaja.format(formatoFecha));
+            mostrarinfopelicula += "Fecha de baja: " + this.FechaBaja.format(formatoFecha) + "\n";
         }
-        System.out.println("----------------");
+        mostrarinfopelicula += "----------------";
+        return mostrarinfopelicula;
     }
 
 

@@ -46,16 +46,29 @@ public class VideoDaw {
     }
 
 
-    public void mostrarinfoVideoCLub() {
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+        sb.append("cif='").append(cif).append("\n");
+        sb.append("direccion='").append(direccion).append("\n");
+        sb.append("FechaAlta=").append(FechaAlta).append("\n");
+        sb.append("PeliculasRegistradas=").append(Arrays.toString(PeliculasRegistradas)).append("\n");
+        sb.append("ClientesRegistrados=").append(Arrays.toString(ClientesRegistrados)).append("\n");
+        return sb.toString();
+    }
+
+    public String mostrarinfoVideoCLub() {
 
         DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        System.out.println("--- INFORMACION DEL VIDEOCLUB ---");
-        System.out.println("cif: " + this.cif);
-        System.out.println("direccion: " + this.direccion);
-        System.out.println("FechaAlta: " + this.FechaAlta.format(formatoFecha));
-        System.out.println("Peliculas Registradas: " + this.PeliculasRegistradas);
-        System.out.println("Clientes Registrados: " + this.ClientesRegistrados);
+        String mostrarinfovideoclub ="---MOSTRAR INFORMACION DEL VIDEOCLUB--- \n";
+        mostrarinfovideoclub += "CIF: " + this.cif + "\n";
+        mostrarinfovideoclub += "direccion: " + this.direccion + "\n";
+
+        if (this.FechaAlta != null) {
+            mostrarinfovideoclub += "Fecha de alta: " + this.FechaAlta.format(formatoFecha) + "\n";
+        }
+        return mostrarinfovideoclub;
     }
 
     public void mostrarPeliculasRegistradas() {

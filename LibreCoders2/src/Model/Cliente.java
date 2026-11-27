@@ -58,19 +58,22 @@ public class Cliente {
     }
 
 
-    public void mostrarinfoCliente() {
-
+    public String mostrarinfoCliente() {
 
         DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        System.out.println("--- INFORMACION DEL CLIENTE ---");
-        System.out.println("DNI: " + this.dni);
-        System.out.println("Nombre: " + this.nombre);
-        System.out.println("Fecha de nacimiento: " + this.fechaNacimiento.format(formatoFecha));
-        System.out.println("Numero de Socio: " + this.NumSocio);
-        System.out.println("Peliculas Alquiladas: " + this.PeliculasAlquiladas);
+        String mostrarinfocliente = "---MOSTRAR INFORMACION DEL CLIENTE--- \n";
+        mostrarinfocliente += "DNI: " + this.dni + "\n";
+        mostrarinfocliente += "nombre:  " + this.nombre + "\n";
+        mostrarinfocliente += "NumSocio: " + this.NumSocio + "\n";
+        mostrarinfocliente += "Direccion: " + this.direccion + "\n";
+        mostrarinfocliente += "Fecha de nacimiento: " + this.fechaNacimiento + "\n";
 
 
+        if (this.Fechabaja != null) {
+            mostrarinfocliente += "Fecha de baja: " + this.Fechabaja.format(formatoFecha) + "\n";
+        }
+        return mostrarinfocliente;
     }
 
     public void mostrarPeliculasAlquiladas() {

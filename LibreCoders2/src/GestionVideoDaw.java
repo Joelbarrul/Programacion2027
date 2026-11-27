@@ -18,7 +18,7 @@ public class GestionVideoDaw {
             System.out.println("\n===== GESTION VIDEODAW =====");
             System.out.println("1. Crear y registrar VideoClub en la franquicia");
             System.out.println("2. Registrar película en videoclub");
-            System.out.println("3.Creae y registrar cliente en videoclub");
+            System.out.println("3.Crear y registrar cliente en videoclub");
             System.out.println("4. Alquilar película");
             System.out.println("5. Devolver pelicula");
             System.out.println("6. Dar de baja cliente");
@@ -78,7 +78,7 @@ public class GestionVideoDaw {
                     String nombre = sc.nextLine();
                     System.out.print("Introduce el numero de socio: ");
                     String numSocio = sc.nextLine();
-                    System.out.print("Introduce l direccion: ");
+                    System.out.print("Introduce la direccion: ");
                     String dirCliente = sc.nextLine();
 
                     System.out.print("Introduce la fecha de nacimiento (dd/MM/yyyy): ");
